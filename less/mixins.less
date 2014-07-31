@@ -1,0 +1,38 @@
+// clearfix
+// --------------------------------------------------
+.clearfix() {
+
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+// opacity
+// --------------------------------------------------
+.opacity (@opacity: 100) {
+	@opacity-percentage: @opacity / 100;
+
+	-webkit-opacity:	@opacity-percentage;
+	-moz-opacity:		@opacity-percentage;
+	opacity:			@opacity-percentage;
+}
+
+// transition
+// --------------------------------------------------
+.transition(@property: all, @duration: @transition-speed, @ease: linear) {
+	-webkit-transition:	@property @duration @ease;
+	-moz-transition:	@property @duration @ease;
+	-ms-transition:		@property @duration @ease;
+	-o-transition:		@property @duration @ease;
+	transition:			@property @duration @ease;
+}
+
+.transitions(@value) {
+	-webkit-transition:	@value;
+	-moz-transition:	@value;
+	-ms-transition:		@value;
+	-o-transition:		@value;
+	transition:			@value;
+}
